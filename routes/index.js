@@ -1,9 +1,10 @@
-const createRouter = require('./router');
+const express = require('express');
 
-const router = createRouter();
+const router = express.Router();
 
-const groupRoutes = require('./modules/groupsRoutes');
-
-router.use(groupRoutes);
+/* GET home page. */
+router.get('/', (req, res, next) => {
+  res.send('Hello, world!');
+});
 
 module.exports = router;
